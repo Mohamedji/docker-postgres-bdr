@@ -1,5 +1,6 @@
 # vim:set ft=dockerfile:
-FROM jgiannuzzi/docker-postgres-bdr
+
+FROM jgiannuzzi/postgres-bdr
 
 
 ENV GOSU_VERSION 1.7
