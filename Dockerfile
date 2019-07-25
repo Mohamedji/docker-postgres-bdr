@@ -34,7 +34,7 @@ ENV PG_VERSION 9.4.17-1.jessie+1
 RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main' $PG_MAJOR > /etc/apt/sources.list.d/pgdg.list
 RUN echo 'deb http://packages.2ndquadrant.com/bdr/apt/ jessie-2ndquadrant main' > /etc/apt/sources.list.d/2ndquadrant.list
 
-RUN apt-get update 
+RUN apt-get update \
 	&& apt-get install -y postgresql-common 
 #	&& sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf \
 #	&& apt-get install -y \
