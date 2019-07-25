@@ -35,8 +35,7 @@ RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main' $PG_MAJ
 RUN echo 'deb http://packages.2ndquadrant.com/bdr/apt/ jessie-2ndquadrant main' > /etc/apt/sources.list.d/2ndquadrant.list
 
 RUN apt-get update 
-#\
-#	&& apt-get install -y postgresql-common \
+	&& apt-get install -y postgresql-common 
 #	&& sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf \
 #	&& apt-get install -y \
 #		postgresql-bdr-$PG_MAJOR=$PG_VERSION \
